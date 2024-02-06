@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&display=swap');
+
+:root{
+	--web_blue: #0C3697;
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	background-color:white;
+	color: var(--web_blue);
+	font-size: 16px;
+    font-family: 'Space Mono', monospace;
+}
+
+a{
+	color: var(--web_blue);
+}
+
+.h1{
+	font-weight: 600;
+}
+
+.grid_row{
+	display: grid; 
+ 	grid-template-columns: 25% 25% 25% 25%; 
+  	gap: 0px 0px; 
+	border-bottom: 1px solid var(--web_blue);
+	border-left: 1px solid var(--web_blue);
+	border-right: 1px solid var(--web_blue);
+}
+.add_right_border{
+	border-right: 1px solid var(--web_blue);
+}
+.add_left_border_white{
+	border-left: 1px solid white;
+}
+.add_right_border_white{
+	border-left: 1px solid white;
+}
+.grid-item{
+	
+}
+.grid_one_column{
+	grid-column: span 1;
+}
+.grid_two_column{
+	grid-column: span 2;
+}
+.grid_three_column{
+	grid-column: span 3;
+}
+.grid_four_column{
+	grid-column:  span 4;
+}
+.white_on_blue{
+	background-color: var(--web_blue);
+	color: white;
+}
+.margin_top{
+	margin-top:68px;
+}
+.menu_item{
+	cursor: pointer;
+}
+/*.menu_item:hover{
+	background-color: var(--web_blue);
+	color: white;
+}*/
+.arrow{
+	margin-right: 15px;
+	float:left;
+}
+.add_padding{
+	box-sizing: border-box;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 10px;
+}
+
+.dropdown_content{
+  	overflow: hidden;
+	padding-bottom: 0;
+	padding-top: 0;
+  	height: 0;
+  	transition: height 0.2s;
+}
+.expanded {
+ 	height: 100%;
+	padding-bottom: 5px;
+	padding-top: 5px;
+}
+.action_area{
+	box-sizing: border-box;
+	cursor: pointer;
+}
+/*.action_area:hover{
+	background-color: var(--web_blue);
+	color: white;
+}*/
+.rotate {
+  transform: rotate(90deg);
+  ransition: transform 0.5s;
+}
+.no_arrow .arrow {
+	display: none;
+	visibility: hidden;
+}
+.team_container{
+	/*font-family: 'Source Sans 3', sans-serif;*/
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 30px;
+  	column-gap: 20px;
+	justify-content:center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.team_member{
+	width: 20%;
+	height:auto;
+}
+.img_container{
+	width: 65%;
+  	position: relative;
+  	padding-bottom: 65%; /* Hier wird das Quadrat durch das Padding Hack erstellt */
+  	overflow: hidden;
+	/*border-radius: 50%;*/
+}
+.img_container img{
+	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	object-fit: cover; /* sorgt dafür, dass das Bild das Quadrat ausfüllt, ohne das Seitenverhältnis zu ändern */
+}
+
+.logos{
+	width:80%;
+}
+
+#animation img{
+	width: 100%;
+}
+
+.add_mobile_border{
+		border-bottom: none;
+	}
+
+.header_menu{
+	position:fixed;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	z-index: 1;
+}
+
+.filler{
+	height: 0;
+}
+
+@media (max-width:700px){
+	
+	.grid_one_column{
+		grid-column: span 4;
+	}
+	.grid_two_column{
+		grid-column: span 4;
+	}
+	.grid_three_column{
+		grid-column: span 4;
+	}
+	.grid_four_column{
+		grid-column:  span 4;
+	}
+	.mobile_row > .grid_one_column{
+		grid-column: span 1;
+	}
+	.mobile_row > .grid_two_column{
+		grid-column: span 2;
+	}
+	.mobile_row > .grid_three_column{
+		grid-column: span 3;
+	}
+	.mobile_row > .grid_four_column{
+		grid-column:  span 4;
+	}
+	.team_member{
+		width: 30%;
+		height:auto;
+	}
+	.logos{
+		width:50%;
+	}
+	.add_right_border{
+		border-right: none;
+	}
+	.menu_item.add_right_border{
+		border-right: 1px solid var(--web_blue) !important; 
+	}
+	.add_mobile_border{
+		border-bottom: 1px solid var(--web_blue);
+	}
+	.add_right_border_white{
+		border-left: none;
+	}
+	.lauftext{
+		font-size: 14px;
+	}
+	
+}
+
